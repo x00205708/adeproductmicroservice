@@ -33,7 +33,7 @@ db.mongoose
 require("./app/routes/product.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.NODE_DOCKER_PORT || 8080;
+const PORT = process.env.NODE_DOCKER_PORT || 9080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
