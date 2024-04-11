@@ -1,7 +1,15 @@
-FROM node:14
+FROM node:8
 
+# Create app dir
 WORKDIR /usr/src/app
-COPY package.json .
+
+# Install app dependencies
+COPY package*.json ./
+
 RUN npm install
+
+# Bundle app source
 COPY . .
-CMD npm start
+
+EXPOSE 9080
+CMD ["npm", "start"]
